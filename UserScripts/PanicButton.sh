@@ -13,7 +13,6 @@ pkill -9 vlc
 pkill -9 mpv
 
 channels=(
-    "LinusTechTips"
     "markiplier"
     "gothamchess"
     "kentuckyballistics"
@@ -42,10 +41,10 @@ rm -rf curloutput.json # remove the curl output file as it is no longer needed
 nohup firefox "https://www.youtube.com/watch?v=$random_video_id&t=${start_time}s" >/dev/null 2>&1 &
 
 # Wait for Firefox to finish loading the webpage
-sleep 4  # Adjust sleep duration as needed
+sleep 5  # Adjust sleep duration as needed
 
 # Send "SPACE" keyboard command using ydotool
-wtype -k k # plays the video
+wtype -k i k # plays the video
 
 sleep 2 # added to support the below line to put the video in fullscreen
 

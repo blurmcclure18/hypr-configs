@@ -3,6 +3,10 @@
 
 # wlogout (Power, Screen Lock, Suspend, etc)
 
+# Get screenshot for Blur effect
+#grim /tmp/shot.png
+#magick /tmp/shot.png -blur 0x8 /tmp/shot_blurred.png
+
 # Set variables for parameters
 A_2160=450
 B_2160=450
@@ -54,4 +58,5 @@ elif ((resolution >= 720 && resolution < 1080)); then
 else
     echo "Setting default parameters"
     wlogout &
+   # wlogout --protocol layer-shell &
 fi
